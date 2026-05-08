@@ -294,7 +294,7 @@ a {
     font-size: clamp(44px, 6vw, 78px);
     line-height: 1.04;
     letter-spacing: 0;
-    max-width: 740px;
+    max-width: 560px;
 }
 
 .lead {
