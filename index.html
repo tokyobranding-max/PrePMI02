@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrePMI AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="rail" aria-label="メインナビゲーション">
+            <button class="rail-logo" aria-label="PrePMIホーム"><span></span></button>
+            <nav class="rail-nav">
+                <button class="rail-button active" aria-label="ダッシュボード"><span class="grid-icon"></span></button>
+                <button class="rail-button" aria-label="診断チェック"><span class="check-icon"></span></button>
+                <button class="rail-button" aria-label="ロードマップ"><span class="flow-icon"></span></button>
+                <button class="rail-button" aria-label="分析"><span class="chart-icon"></span></button>
+                <button class="rail-button" aria-label="設定"><span class="gear-icon"></span></button>
+            </nav>
+            <button class="rail-button rail-bottom" aria-label="案件一覧"><span class="building-icon"></span></button>
+        </aside>
+        <aside class="project-panel">
+            <p class="eyebrow">進行中の案件</p>
+            <section class="project-card"><h1>A社 × B社 PrePMI診断</h1><p>製造業 × SaaS / 280名規模</p><div class="thin-meter"><span style="width: 58%"></span></div><div class="project-day"><strong>Day -18</strong><span>Signing前</span></div></section>
+            <section class="side-section">
+                <h2>診断レイヤー</h2>
+                <button class="layer-row"><span class="dot muted"></span><strong>すべて</strong><em>28</em></button>
+                <button class="layer-row active"><span class="dot purple"></span><strong>文化 / DNA</strong><em>5</em></button>
+                <button class="layer-row"><span class="dot blue"></span><strong>ブランド</strong><em>4</em></button>
+                <button class="layer-row"><span class="dot green"></span><strong>人材 / 組織</strong><em>5</em></button>
+                <button class="layer-row"><span class="dot coral"></span><strong>IT / データ</strong><em>6</em></button>
+                <button class="layer-row"><span class="dot amber"></span><strong>業務 / 制度</strong><em>4</em></button>
+                <button class="layer-row"><span class="dot pink"></span><strong>リスク論点</strong><em>4</em></button>
+            </section>
+            <section class="side-section compact"><h2>他の案件</h2><div class="mini-case"><span class="dot green"></span><strong>C社 × D社</strong><em>DD中</em></div><div class="mini-case"><span class="dot coral"></span><strong>E社 カーブアウト</strong><em class="warn">準備中</em></div></section>
+        </aside>
+        <main class="workspace">
+            <header class="topbar"><div><p>案件管理 〉 A社 × B社 〉 <strong>PrePMIダッシュボード</strong></p></div><nav class="view-tabs" aria-label="表示切替"><button>ガント</button><button class="active">Kanban</button><button>リスト</button><button>レポート</button></nav><div class="top-actions"><a href="landing.html" class="trial-link secondary">LP</a><a href="trial.html" class="trial-link">お試し診断</a><a href="sitemap.html" class="trial-link secondary">サイトMAP</a><button aria-label="検索" class="icon-button search"></button><button aria-label="絞り込み" class="icon-button filter"></button><button aria-label="通知" class="icon-button bell"></button></div></header>
+            <section class="hero-grid">
+                <article class="timeline-card"><div class="card-heading"><div><h2>PrePMI診断タイムライン</h2><p>Signing前 - 2026年6月統合準備状況</p></div><div class="month-switch"><button aria-label="前月">‹</button><strong>6月</strong><button aria-label="翌月">›</button></div></div><div class="timeline"><div class="date-row"><span>24</span><span>25</span><span class="today">26</span><span>27</span><span>28</span><span>29</span><span>30</span></div><div class="timeline-row"><div class="track-label purple-label">文</div><div class="track-copy"><strong>企業DNA診断</strong><span>文化レイヤー</span></div><div class="bar purple-bar" style="grid-column: 3 / span 4;"><span>62%</span></div></div><div class="timeline-row"><div class="track-label coral-label">IT</div><div class="track-copy"><strong>システム棚卸し</strong><span>IT / データ</span></div><div class="bar coral-bar" style="grid-column: 4 / span 3;"><span>48%</span></div></div><div class="timeline-row"><div class="track-label amber-label">組</div><div class="track-copy"><strong>キーパーソン面談</strong><span>人材 / 組織</span></div><div class="bar amber-bar" style="grid-column: 5 / span 3;"><span>70%</span></div></div><div class="timeline-row"><div class="track-label violet-label">Br</div><div class="track-copy"><strong>ブランド原体験抽出</strong><span>ブランド</span></div><div class="bar violet-bar" style="grid-column: 2 / span 5;"><span>83%</span></div></div></div></article>
+                <article class="score-card"><div class="score-ring"><span>74</span></div><p>総合PrePMIスコア</p><strong>B判定</strong><small>統合可能。ただし文化・ブランド領域は経営主導の設計が必要</small></article>
+            </section>
+            <section class="task-board"><div class="section-title"><h2>診断ボード</h2><button class="primary-action">AIレポート生成</button></div><div class="kanban">
+                <section class="column"><header><span>DRAFT</span><em>4</em></header><article class="task-card"><button class="more" aria-label="詳細"></button><h3>DD追加質問リスト作成</h3><span class="pill blue-pill">DD</span><p>財務DDでは見えない文化・制度・ブランド論点を質問化する</p><div class="task-meta"><span class="avatar blue">田</span><span class="date">6/12</span><strong class="priority high">高優先</strong></div></article><article class="task-card"><button class="more" aria-label="詳細"></button><h3>資料アップロード分類</h3><span class="pill green-pill">資料</span><p>両社の組織図、ブランド資料、業務規程をAI診断対象に整理</p><div class="task-meta"><span class="avatar coral">佐</span><span class="date">14件</span><strong class="priority mid">中優先</strong></div></article></section>
+                <section class="column"><header><span>IN PROGRESS</span><em>8</em></header><article class="task-card"><button class="more" aria-label="詳細"></button><h3>企業DNAギャップ診断</h3><span class="pill purple-pill">文化</span><p>理念、意思決定、顧客観、成長観の差分をAIがスコア化</p><div class="member-row"><span class="avatar purple">日</span><span class="avatar blue">鈴</span><span class="avatar green">山</span></div><div class="progress-line"><span style="width: 62%"></span></div><div class="task-foot"><span>進捗</span><strong>62%</strong></div></article><article class="task-card"><button class="more" aria-label="詳細"></button><h3>シナジー仮説設計</h3><span class="pill green-pill">経営</span><p>売上・コスト・人材のシナジーと実現阻害要因を整理</p><div class="progress-line teal"><span style="width: 45%"></span></div><div class="task-foot"><span>論点</span><strong>45%</strong></div></article></section>
+                <section class="column"><header><span>REVIEW</span><em>5</em></header><article class="task-card"><button class="more" aria-label="詳細"></button><h3>ブランド統合方針</h3><span class="pill coral-pill">ブランド</span><p>吸収型・並存型・新ブランド創出型の比較案をレビュー</p><div class="task-meta"><span class="avatar coral">澤</span><span class="date">6/18</span><strong class="star">★</strong></div></article><article class="task-card"><button class="more" aria-label="詳細"></button><h3>Day1メッセージ草案</h3><span class="pill violet-pill">ナラティブ</span><p>社員向け、顧客向け、管理職向けの統合説明文を生成</p><div class="task-meta"><span class="avatar violet">伊</span><span class="date">3案</span><strong class="priority mid">確認中</strong></div></article></section>
+                <section class="column"><header><span>DONE</span><em>7</em></header><article class="task-card selected"><button class="more" aria-label="詳細"></button><h3>カルチャーフィット診断</h3><span class="pill purple-pill">文化</span><p>6軸30問の診断を両社管理職対象に実施。レポート共有完了</p><div class="member-row"><span class="avatar blue">田</span><span class="avatar green">中</span><span class="avatar teal">坂</span></div><div class="done-mark">✓</div></article><article class="task-card"><button class="more" aria-label="詳細"></button><h3>経営者ヒアリング要約</h3><span class="pill blue-pill">原体験</span><p>創業背景と顧客への約束を抽出。統合ナラティブ素材化済み</p><div class="task-meta"><span class="avatar purple">近</span><span class="date">完了</span><div class="done-mark small">✓</div></div></article></section>
+            </div></section>
+        </main>
+        <aside class="insight-panel"><div class="profile"><div class="profile-icon">AI</div><h2>PrePMI Copilot</h2><p>統合診断AI / A社 × B社</p><strong>診断 Day -18</strong></div><section class="right-block"><h3>本日の推奨アクション</h3><div class="schedule-card"><span class="avatar blue">文</span><strong>10:00 - 文化差分レビュー</strong><i class="accent purple-accent"></i></div><div class="schedule-card"><span class="avatar amber">経</span><strong>13:00 - CEO向け買収判断会</strong><i class="accent amber-accent"></i></div><div class="schedule-card"><span class="avatar coral">Br</span><strong>15:30 - ブランド統合仮説</strong><i class="accent coral-accent"></i></div><div class="schedule-card"><span class="avatar green">IT</span><strong>17:00 - SaaS重複棚卸し</strong><i class="accent blue-accent"></i></div></section><section class="right-block"><h3>領域別スコア</h3><div class="rings"><div class="mini-ring purple-ring"><span>82</span><small>文化</small></div><div class="mini-ring coral-ring"><span>58</span><small>IT</small></div><div class="mini-ring amber-ring"><span>69</span><small>組織</small></div><div class="mini-ring violet-ring"><span>76</span><small>ブランド</small></div></div></section><section class="right-block"><h3>AIリスクアラート</h3><div class="risk-list"><article><strong>ブランド吸収への心理的抵抗</strong><p>B社社員の原体験を残す説明が必要</p></article><article><strong>CRM二重運用リスク</strong><p>Day1では統合せず、90日で移行設計</p></article><article><strong>キーパーソン離職兆候</strong><p>技術責任者とCS責任者の面談を優先</p></article></div></section></aside>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
