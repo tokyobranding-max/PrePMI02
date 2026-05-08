@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrePMI お試し診断</title>
+    <link rel="stylesheet" href="trial.css">
+</head>
+<body>
+    <main class="trial-shell">
+        <section class="intro-panel">
+            <nav class="brand-bar">
+                <a href="landing.html" class="brand-home">
+                    <div class="brand-mark">P</div>
+                    <span>PrePMI AI診断</span>
+                </a>
+                <a href="sitemap.html" class="map-link">サイトMAP</a>
+            </nav>
+
+            <div class="hero-copy">
+                <p class="eyebrow">Online Trial Diagnosis</p>
+                <h1>M&Aの前に、統合の危険信号を3分で確認。</h1>
+                <p>
+                    文化・ブランド・組織・ITの観点から、PMIで詰まりやすいポイントを簡易診断します。
+                    結果はその場で表示され、必要な追加DDや100日計画の論点まで確認できます。
+                </p>
+            </div>
+
+            <div class="trust-row">
+                <article>
+                    <strong>3分</strong>
+                    <span>回答時間</span>
+                </article>
+                <article>
+                    <strong>6領域</strong>
+                    <span>統合リスク</span>
+                </article>
+                <article>
+                    <strong>無料</strong>
+                    <span>初回診断</span>
+                </article>
+            </div>
+
+            <div class="sample-card">
+                <div class="sample-ring">
+                    <span>74</span>
+                </div>
+                <div>
+                    <strong>サンプル判定：B</strong>
+                    <p>統合可能。ただし文化・ブランド領域は経営主導の設計が必要です。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="diagnosis-panel" aria-label="PrePMIお試し診断フォーム">
+            <div class="step-header">
+                <div>
+                    <p class="eyebrow">Step <span id="stepNumber">1</span> / 4</p>
+                    <h2 id="stepTitle">案件の基本情報</h2>
+                </div>
+                <div class="progress-track" aria-hidden="true">
+                    <span id="progressBar"></span>
+                </div>
+            </div>
+
+            <form id="trialForm">
+                <section class="step active" data-step="1">
+                    <div class="field-grid">
+                        <label>
+                            <span>買収企業名</span>
+                            <input type="text" name="buyer" value="A社" placeholder="例：A社">
+                        </label>
+                        <label>
+                            <span>対象企業名</span>
+                            <input type="text" name="target" value="B社" placeholder="例：B社">
+                        </label>
+                        <label>
+                            <span>案件ステージ</span>
+                            <select name="stage">
+                                <option>初期検討</option>
+                                <option selected>DD中</option>
+                                <option>LOI後</option>
+                                <option>契約前</option>
+                                <option>クロージング前</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>買収目的</span>
+                            <select name="purpose">
+                                <option selected>事業拡大</option>
+                                <option>技術・人材獲得</option>
+                                <option>新市場参入</option>
+                                <option>コストシナジー</option>
+                                <option>ブランド強化</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="upload-box">
+                        <div>
+                            <strong>任意資料アップロード</strong>
+                            <p>会社紹介、組織図、ブランド資料、IT一覧など。プロトタイプではファイル名のみ表示します。</p>
+                        </div>
+                        <label class="upload-button">
+                            資料を選択
+                            <input id="fileInput" type="file" multiple>
+                        </label>
+                    </div>
+                    <ul class="file-list" id="fileList"></ul>
+                </section>
+
+                <section class="step" data-step="2">
+                    <div class="question-stack">
+                        <fieldset class="question-card" data-domain="culture">
+                            <legend>両社の意思決定スピードや判断基準は近い</legend>
+                            <div class="scale-row">
+                                <label><input type="radio" name="cultureFit" value="25">低い</label>
+                                <label><input type="radio" name="cultureFit" value="50">やや低い</label>
+                                <label><input type="radio" name="cultureFit" value="75" checked>やや高い</label>
+                                <label><input type="radio" name="cultureFit" value="90">高い</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="question-card" data-domain="culture">
+                            <legend>経営者の原体験や事業観を言語化できている</legend>
+                            <div class="scale-row">
+                                <label><input type="radio" name="originClarity" value="30">未整理</label>
+                                <label><input type="radio" name="originClarity" value="55">一部あり</label>
+                                <label><input type="radio" name="originClarity" value="80" checked>整理済み</label>
+                                <label><input type="radio" name="originClarity" value="95">共有済み</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="question-card" data-domain="brand">
+                            <legend>ブランド統合の方針が経営陣で合意されている</legend>
+                            <div class="scale-row">
+                                <label><input type="radio" name="brandPolicy" value="20">未定</label>
+                                <label><input type="radio" name="brandPolicy" value="45" checked>仮説あり</label>
+                                <label><input type="radio" name="brandPolicy" value="75">概ね合意</label>
+                                <label><input type="radio" name="brandPolicy" value="90">明確</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <section class="step" data-step="3">
+                    <div class="question-stack">
+                        <fieldset class="question-card" data-domain="people">
+                            <legend>統合後も残ってほしいキーパーソンを特定できている</legend>
+                            <div class="scale-row">
+                                <label><input type="radio" name="keyPeople" value="25">未特定</label>
+                                <label><input type="radio" name="keyPeople" value="50" checked>一部特定</label>
+                                <label><input type="radio" name="keyPeople" value="78">特定済み</label>
+                                <label><input type="radio" name="keyPeople" value="92">面談済み</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="question-card" data-domain="it">
+                            <legend>SaaS・基幹システム・データ管理の棚卸しができている</legend>
+                            <div class="scale-row">
+                                <label><input type="radio" name="itInventory" value="20">未着手</label>
+                                <label><input type="radio" name="itInventory" value="45" checked>一覧あり</label>
+                                <label><input type="radio" name="itInventory" value="74">重複把握済み</label>
+                                <label><input type="radio" name="itInventory" value="88">移行方針あり</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="question-card" data-domain="synergy">
+                            <legend>買収後100日で実現したいシナジーが定義されている</legend>
+                            <div class="scale-row">
+                                <label><input type="radio" name="synergy" value="25">未定</label>
+                                <label><input type="radio" name="synergy" value="55">大枠あり</label>
+                                <label><input type="radio" name="synergy" value="80" checked>定義済み</label>
+                                <label><input type="radio" name="synergy" value="94">KPI化済み</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <section class="step" data-step="4">
+                    <div class="contact-card">
+                        <h3>診断結果の送付先</h3>
+                        <p>画面上で簡易結果を表示します。実運用では、この情報をCRMや商談予約に接続します。</p>
+                        <div class="field-grid">
+                            <label>
+                                <span>お名前</span>
+                                <input type="text" name="name" value="田中 マネージャー">
+                            </label>
+                            <label>
+                                <span>メールアドレス</span>
+                                <input type="email" name="email" value="tanaka@example.com">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="consent-row">
+                        <label>
+                            <input type="checkbox" checked>
+                            診断結果をもとに、追加DD論点とPMI提案の案内を受け取る
+                        </label>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="button" class="ghost-button" id="backButton">戻る</button>
+                    <button type="button" class="primary-button" id="nextButton">次へ</button>
+                </div>
+            </form>
+
+            <section class="result-panel" id="resultPanel" aria-live="polite">
+                <div class="result-head">
+                    <div class="result-ring" id="resultRing">
+                        <span id="resultScore">--</span>
+                    </div>
+                    <div>
+                        <p class="eyebrow">Trial Result</p>
+                        <h2 id="resultTitle">診断結果</h2>
+                        <p id="resultLead"></p>
+                    </div>
+                </div>
+
+                <div class="score-grid">
+                    <article><span>文化</span><strong id="cultureScore">--</strong></article>
+                    <article><span>ブランド</span><strong id="brandScore">--</strong></article>
+                    <article><span>組織</span><strong id="peopleScore">--</strong></article>
+                    <article><span>IT</span><strong id="itScore">--</strong></article>
+                </div>
+
+                <div class="recommendation-box">
+                    <h3>次に確認すべき論点</h3>
+                    <ul id="riskList"></ul>
+                </div>
+
+                <div class="cta-box">
+                    <div>
+                        <strong>15分の診断レビューへ進む</strong>
+                        <p>詳細版では資料解析、文化ギャップマップ、Day100計画まで作成します。</p>
+                    </div>
+                    <button type="button">日程を相談</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="trial.js"></script>
+</body>
+</html>
